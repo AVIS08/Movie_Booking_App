@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upcoming Movies</title>
+    <style>
+        /* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjWzdhRBKqyJ0pWrlj6N2tqWgxRxZIpFTPww&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+
+        h1 {
+            font-size: 2.5em;
+            color: #444;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Table styles */
+        .movie-table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-table th, .movie-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .movie-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .movie-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .movie-table tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Button styles */
+        .back-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upcoming Movies</h1>
+
+    <!-- Table of Upcoming Movies -->
+    <table class="movie-table">
+        <thead>
+            <tr>
+                <th>Movie Title</th>
+                <th>Release Date</th>
+                <th>Genre</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Avatar 3</td>
+                <td>2025-12-20</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>James Cameron</td>
+            </tr>
+            <tr>
+                <td>Guardians of the Galaxy Vol. 4</td>
+                <td>2025-05-05</td>
+                <td>Action, Comedy, Sci-Fi</td>
+                <td>James Gunn</td>
+            </tr>
+            <tr>
+                <td>Mission: Impossible 8</td>
+                <td>2025-07-04</td>
+                <td>Action, Thriller</td>
+                <td>Christopher McQuarrie</td>
+            </tr>
+            <tr>
+                <td>Fast & Furious 11</td>
+                <td>2025-06-30</td>
+                <td>Action, Crime, Thriller</td>
+                <td>Louis Leterrier</td>
+            </tr>
+            <tr>
+                <td>Deadpool 3</td>
+                <td>2025-09-06</td>
+                <td>Action, Comedy</td>
+                <td>Shawn Levy</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+</body>
+</html>

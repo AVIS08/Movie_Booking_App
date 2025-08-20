@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+        .back-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+    
+    <h2>Avengers Endgame</h2>
+    <div class="image-gallery">
+        <img src="images/image1.jpg" alt="Image 1">
+        <img src="images/image2.jpg" alt="Image 2">
+        <img src="images/image3.jpg" alt="Image 3">
+    </div>
+
+    <h2>The Dark Knight</h2>
+    <div class="image-gallery">
+        <img src="images/image4.jpg" alt="Image 4">
+        <img src="images/image5.jpg" alt="Image 5">
+        <img src="images/image6.jpg" alt="Image 6">
+    </div>
+
+
+    <h2>Inception</h2>
+    <div class="image-gallery">
+        <img src="images/image7.jpg" alt="Image 7">
+        <img src="images/image8.jpg" alt="Image 8">
+        <img src="images/image9.jpg" alt="Image 9">
+    </div>
+
+
+    <h2>Spiderman: No Way Home</h2>
+    <div class="image-gallery">
+        <img src="images/image10.jpg" alt="Image 10">
+        <img src="images/image11.jpg" alt="Image 11">
+        <img src="images/image12.jpg" alt="Image 12">
+    </div>
+    <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+
+</body>
+</html>

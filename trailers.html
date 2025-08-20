@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Trailers</title>
+    <style>
+      /* Basic Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+    line-height: 1.6;
+}
+
+
+      /* Centering the content */
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background:url('data:image/jpeg;base64,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');
+	background-repeat: no-repeat;
+	background-size: cover;
+    	background-position: center;
+      }
+
+      /* Heading styles */
+      h1 {
+        text-align: center;
+        color: #4caf50;
+        margin-bottom: 20px;
+      }
+
+      /* Movie section styles */
+      .movie {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+      }
+
+      .movie:last-child {
+        border-bottom: none;
+      }
+
+      .movie img {
+        width: 150px;
+        height: 220px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .movie-details {
+        flex: 1;
+        padding-left: 20px;
+      }
+
+      .movie h2 {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+
+      .movie a {
+        color: #4caf50;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      .movie a:hover {
+        text-decoration: underline;
+      }
+
+      /* Button style for the "See Trailer" link */
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #bd3011;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .button:hover {
+        background-color: #9c4435;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Trailers</h1>
+
+      <!-- Movie 1 -->
+      <div class="movie">
+        <img src="image11.jpg" alt="Avengers: Endgame" />
+        <div class="movie-details">
+          <h2>Avengers: Endgame</h2>
+          <p>Release Date: April 26, 2019</p>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/TcMBFSGVi1c"
+            title="Marvel Studios&#39; Avengers: Endgame - Official Trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe
+          ><br />
+          <a
+            class="button"
+            href="https://www.youtube.com/watch?v=TcMBFSGVi1c"
+            target="_blank"
+            >See Trailer</a
+          >
+        </div>
+      </div>
+
+      <!-- Movie 2 -->
+      <div class="movie">
+        <img src="image10.jpg" alt="Spider-Man: No Way Home" />
+        <div class="movie-details">
+          <h2>Spider-Man: No Way Home</h2>
+          <p>Release Date: July 19, 2021</p>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/JfVOs4VSpmA?si=jrQ6UvxCceBz_fG9"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe
+          ><br />
+          <a class="button" href="https://youtu.be/JfVOs4VSpmA" target="_blank"
+            >See Trailer</a
+          >
+        </div>
+      </div>
+
+      <!-- Movie 3 -->
+      <div class="movie">
+        <img src="images12.jpg" alt="Inception" />
+        <div class="movie-details">
+          <h2>Inception</h2>
+          <p>Release Date: July 16, 2010</p>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/YoHD9XEInc0"
+            title="Inception (2010) Official Trailer #1 - Christopher Nolan Movie HD"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe
+          ><br />
+          <a
+            class="button"
+            href="https://www.youtube.com/watch?v=YoHD9XEInc0"
+            target="_blank"
+            >See Trailer</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
